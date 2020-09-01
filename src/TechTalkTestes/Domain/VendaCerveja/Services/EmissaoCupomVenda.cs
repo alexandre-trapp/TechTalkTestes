@@ -1,10 +1,10 @@
 ﻿using System.Text;
 
-namespace TechTalkTestes.Domain.VendaCerveja.Servicos
+namespace TechTalkTestes.Domain.VendaCerveja.Services
 {
     public class EmissaoCupomVenda
     {
-        public string EmitirCupomDaVenda(VendaCerveja vendaCerveja)
+        public string EmitirCupomDaVenda(VendaCervejaComum vendaCerveja)
         {
             var cupomVenda = new StringBuilder();
 
