@@ -11,7 +11,7 @@ namespace TechTalkTestes.Unit.Tests.Domain.Services
         public void deve_vender_quatro_cervejas_da_marca_skol_por_4_reais_totalizando_16_reais_a_venda()
         {
             // prepare
-            var cervejaSkol = new Cerveja("skol", 4.0m);
+            var cervejaSkol = new Cerveja(marca: "skol", valorUnitario: 4.0m);
             var vendaCervejaComum = new VendaCervejaComum();
 
             // action

@@ -1,4 +1,5 @@
-﻿using TechTalkTestes.Domain.VendaCerveja.Entities;
+﻿using System;
+using TechTalkTestes.Domain.VendaCerveja.Entities;
 
 namespace TechTalkTestes.Domain.VendaCerveja.Services
 {
@@ -10,6 +11,9 @@ namespace TechTalkTestes.Domain.VendaCerveja.Services
 
         public void VenderCerveja(Cerveja cerveja, int quantidade)
         {
+            if (!cerveja.Premium)
+                throw new OperationCanceledException("Tipo da cerveja deve ser 'Premium' para utilizar este tipo de venda.");
+
             QuantidadeParaVenda = quantidade;
             CervejaParaVenda = cerveja;
 
@@ -18,7 +22,13 @@ namespace TechTalkTestes.Domain.VendaCerveja.Services
 
         private static decimal CalcularValorTotalVendaCervejaPremium(Cerveja cerveja, int quantidade)
         {
-            return (cerveja.ValorUnitario + (cerveja.ValorUnitario * 0.1m)) * quantidade;
+            return (cerveja.ValorUnitario * quantidade) + SomarDezPorcentoDoValorTotal(cerveja, quantidade);
+        }
+
+        private static decimal SomarDezPorcentoDoValorTotal(Cerveja cerveja, int quantidade)
+        {
+            const decimal VALOR_DEZ_PORCENTO = 0.1m;
+            return (cerveja.ValorUnitario * quantidade) * VALOR_DEZ_PORCENTO;
         }
     }
 }
