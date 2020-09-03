@@ -1,4 +1,4 @@
-﻿namespace TechTalkTestes.Domain.VendaCerveja.Entities
+﻿namespace TechTalkTestes.Domain.Venda.Entities
 {
     public class Cerveja
     {

@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using TechTalkTestes.Domain.VendaCerveja.Services;
-using TechTalkTestes.Domain.VendaCerveja.Entities;
+using TechTalkTestes.Domain.Venda.Services;
+using TechTalkTestes.Domain.Venda.Entities;
 
 namespace TechTalkTestes.Unit.Tests.Domain.Services
 {

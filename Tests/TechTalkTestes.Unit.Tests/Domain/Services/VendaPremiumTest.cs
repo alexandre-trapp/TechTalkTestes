@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using TechTalkTestes.Domain.VendaCerveja.Entities;
-using TechTalkTestes.Domain.VendaCerveja.Services;
+﻿using System;
+using NUnit.Framework;
+using TechTalkTestes.Domain.Venda.Entities;
+using TechTalkTestes.Domain.Venda.Services;
 
 namespace TechTalkTestes.Unit.Tests.Domain.Services
 {

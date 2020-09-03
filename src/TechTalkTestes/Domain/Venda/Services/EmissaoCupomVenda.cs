@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace TechTalkTestes.Domain.VendaCerveja.Services
+namespace TechTalkTestes.Domain.Venda.Services
 {
     public class EmissaoCupomVenda
     {

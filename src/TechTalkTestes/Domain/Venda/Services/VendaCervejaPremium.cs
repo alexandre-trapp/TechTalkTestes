@@ -1,15 +1,11 @@
 ﻿using System;
-using TechTalkTestes.Domain.VendaCerveja.Entities;
+using TechTalkTestes.Domain.Venda.Entities;
 
-namespace TechTalkTestes.Domain.VendaCerveja.Services
+namespace TechTalkTestes.Domain.Venda.Services
 {
-    public class VendaCervejaPremium : IVendaCerveja
+    public class VendaCervejaPremium : VendaCerveja
     {
-        public Cerveja CervejaParaVenda { get; private set; }
-        public int QuantidadeParaVenda { get; private set; }
-        public decimal ValorTotalDaVenda { get; private set; }
-
-        public void VenderCerveja(Cerveja cerveja, int quantidade)
+        public override void VenderCerveja(Cerveja cerveja, int quantidade)
         {
             if (!cerveja.Premium)
                 throw new OperationCanceledException("Tipo da cerveja deve ser 'Premium' para utilizar este tipo de venda.");
