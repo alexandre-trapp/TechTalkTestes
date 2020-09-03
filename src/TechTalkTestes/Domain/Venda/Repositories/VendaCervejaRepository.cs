@@ -13,6 +13,12 @@ namespace TechTalkTestes.Domain.Venda.Repositories
             _conn = conn;
         }
 
+        public void ExcluirTodasAsVendas()
+        {
+            using var command = new NpgsqlCommand("DELETE FROM vendas_cerveja", _conn);
+            command.ExecuteNonQuery();
+        }
+
         public void CadastrarVenda(VendaCerveja vendaCerveja)
         {
             using var command = new NpgsqlCommand("INSERT INTO vendas_cerveja(marca, valor_unitario, quantidade_vendida, valor_total_venda) " +
@@ -41,7 +47,7 @@ namespace TechTalkTestes.Domain.Venda.Repositories
 
             while (vendas.Read())
             {
-                listaVendasCervejas.Append(vendas.GetString(MARCA) + " - R$ " + vendas.GetDecimal(VALOR_UNITARIO) + " - "
+                listaVendasCervejas.AppendLine(vendas.GetString(MARCA) + " - R$ " + vendas.GetDecimal(VALOR_UNITARIO) + " - "
                     + vendas.GetInt32(QUANTIDADE_VENDIDA) + " - " + vendas.GetDecimal(VALOR_TOTAL_VENDA));
 
                 listaVendasCervejas.AppendLine();
