@@ -15,13 +15,13 @@ namespace TechTalkTestes.Domain.Venda.Repositories
 
         public void CadastrarVenda(VendaCerveja vendaCerveja)
         {
-            using var command = new NpgsqlCommand("INSERT INTO VENDAS_CERVEJA(MARCA, VALOR_UNITARIO, QUANTIDADE_VENDIDA, VALOR_TOTAL_VENDA) " +
-                "VALUES (@MARCA, @VALOR_UNITARIO, @QUANTIDADE_VENDIDA, @VALOR_TOTAL_VENDA)", _conn);
+            using var command = new NpgsqlCommand("insert into vendas_cerveja(marca, valor_unitario, quantidade_vendida, valor_total_venda) " +
+                "values (@marca, @valor_unitario, @quantidade_vendida, @valor_total_venda)", _conn);
 
-            command.Parameters.Add(new NpgsqlParameter("MARCA", vendaCerveja.CervejaParaVenda.Marca));
-            command.Parameters.Add(new NpgsqlParameter("VALOR_UNITARIO", vendaCerveja.CervejaParaVenda.ValorUnitario));
-            command.Parameters.Add(new NpgsqlParameter("QUANTIDADE_VENDIDA", vendaCerveja.QuantidadeParaVenda));
-            command.Parameters.Add(new NpgsqlParameter("VALOR_TOTAL_VENDA", vendaCerveja.ValorTotalDaVenda));
+            command.Parameters.Add(new NpgsqlParameter("marca", vendaCerveja.CervejaParaVenda.Marca));
+            command.Parameters.Add(new NpgsqlParameter("valor_unitario", vendaCerveja.CervejaParaVenda.ValorUnitario));
+            command.Parameters.Add(new NpgsqlParameter("quantidade_vendida", vendaCerveja.QuantidadeParaVenda));
+            command.Parameters.Add(new NpgsqlParameter("valor_total_venda", vendaCerveja.ValorTotalDaVenda));
 
             command.ExecuteNonQuery();
         }

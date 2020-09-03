@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace TechTalkTestes.Integration.Tests
 {
+    [TestFixture]
     public class Tests
     {
         [SetUp]
