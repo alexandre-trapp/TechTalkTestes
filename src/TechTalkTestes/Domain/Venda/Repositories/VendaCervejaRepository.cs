@@ -15,8 +15,8 @@ namespace TechTalkTestes.Domain.Venda.Repositories
 
         public void CadastrarVenda(VendaCerveja vendaCerveja)
         {
-            using var command = new NpgsqlCommand("insert into vendas_cerveja(marca, valor_unitario, quantidade_vendida, valor_total_venda) " +
-                "values (@marca, @valor_unitario, @quantidade_vendida, @valor_total_venda)", _conn);
+            using var command = new NpgsqlCommand("INSERT INTO vendas_cerveja(marca, valor_unitario, quantidade_vendida, valor_total_venda) " +
+                "VALUES (@marca, @valor_unitario, @quantidade_vendida, @valor_total_venda)", _conn);
 
             command.Parameters.Add(new NpgsqlParameter("marca", vendaCerveja.CervejaParaVenda.Marca));
             command.Parameters.Add(new NpgsqlParameter("valor_unitario", vendaCerveja.CervejaParaVenda.ValorUnitario));
@@ -33,7 +33,7 @@ namespace TechTalkTestes.Domain.Venda.Repositories
             const int QUANTIDADE_VENDIDA = 2;
             const int VALOR_TOTAL_VENDA = 3;
 
-            using var command = new NpgsqlCommand("SELECT MARCA, VALOR_UNITARIO, QUANTIDADE_VENDIDA, VALOR_TOTAL_VENDA FROM VENDAS_CERVEJA", _conn);
+            using var command = new NpgsqlCommand("SELECT marca, valor_unitario, quantidade_vendida, valor_total_venda FROM vendas_cerveja", _conn);
             var vendas = command.ExecuteReader();
 
             var listaVendasCervejas = new StringBuilder("Lista das vendas realizadas:");
