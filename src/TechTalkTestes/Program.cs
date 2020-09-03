@@ -20,6 +20,8 @@ namespace TechTalkTestes
 
         private static void ConfigureInfraServices()
         {
+            Console.WriteLine("Inicializando a aplicação...");
+
             var serviceCollection = new ServiceCollection();
             DatabaseServices.AddServicePostgre(serviceCollection);
 
@@ -72,7 +74,11 @@ namespace TechTalkTestes
         private static void ListarVendasDaBaseDeDados()
         {
             var listaVendas = _vendaRepository.ListarTodasAsVendas();
-            
+
+            Console.WriteLine(string.Empty);
+            Console.WriteLine("---------------------------.");
+            Console.WriteLine(string.Empty);
+
             Console.WriteLine("Lista das vendas realizadas:");
             Console.WriteLine(string.Empty);
 
