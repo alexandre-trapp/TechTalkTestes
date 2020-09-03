@@ -41,8 +41,8 @@ namespace TechTalkTestes.Domain.Venda.Repositories
 
             while (vendas.Read())
             {
-                listaVendasCervejas.Append(vendas.GetString(MARCA) + " - R$ " + vendas.GetString(VALOR_UNITARIO) + " - "
-                    + vendas.GetString(QUANTIDADE_VENDIDA) + " - " + vendas.GetString(VALOR_TOTAL_VENDA));
+                listaVendasCervejas.Append(vendas.GetString(MARCA) + " - R$ " + vendas.GetDecimal(VALOR_UNITARIO) + " - "
+                    + vendas.GetInt32(QUANTIDADE_VENDIDA) + " - " + vendas.GetDecimal(VALOR_TOTAL_VENDA));
 
                 listaVendasCervejas.AppendLine();
             }
