@@ -12,6 +12,7 @@ namespace TechTalkTestes.Domain.Venda.Repositories
         {
             _conn = conn;
         }
+
         public void CadastrarVenda(VendaCerveja vendaCerveja)
         {
             using var command = new NpgsqlCommand("INSERT INTO VENDAS_CERVEJA(MARCA, VALOR_UNITARIO, QUANTIDADE_VENDIDA, VALOR_TOTAL_VENDA) " +

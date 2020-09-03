@@ -6,14 +6,13 @@ namespace TechTalkTestes.Infra.Database.Postgres
 {
     public static class DatabaseServices
     {
-        public static void AddServicePostgre(IServiceCollection services)
+        public static void AddServicePostgre(IServiceCollection serviceProvider)
         {
             var connection = OpenConnection();
-            services.AddSingleton(connection);
+            serviceProvider.AddSingleton(connection);
 
-            services.AddSingleton<IVendaCervejaRepository, VendaCervejaRepository>();
+            serviceProvider.AddSingleton<IVendaCervejaRepository, VendaCervejaRepository>();
         }
-
 
         private static NpgsqlConnection OpenConnection()
         {

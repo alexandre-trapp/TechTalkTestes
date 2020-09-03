@@ -3,10 +3,10 @@
     public static class PostgreConfiguration
     {
         public static string ConnectionString =>
-            $"Server={Host};" +
-            $"Database={DatabaseName};" +
-            $"Port={Port};" +
-            $"User Id={User};" +
-            $"Password={Password}";
+            $"Server=localhost;" +
+            $"Database=testes_db;" +
+            $"Port=5432;" +
+            $"User Id=sa;" +
+            $"Password=sa";
     }
 }
