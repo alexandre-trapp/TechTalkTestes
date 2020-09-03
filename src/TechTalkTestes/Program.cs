@@ -32,11 +32,17 @@ namespace TechTalkTestes
             VendaCervejaComum vendaBrahma = VenderBrahma();
             VendaCervejaPremium vendaStella = VenderStella();
 
+            ExcluirVendasAntigas();
 
             CadastrarVendaNaBaseDeDados(vendaBrahma);
             CadastrarVendaNaBaseDeDados(vendaStella);
 
             ListarVendasDaBaseDeDados();
+        }
+
+        private static void ExcluirVendasAntigas()
+        {
+            _vendaRepository.ExcluirTodasAsVendas();
         }
 
         private static VendaCervejaComum VenderBrahma()
@@ -66,6 +72,11 @@ namespace TechTalkTestes
         private static void ListarVendasDaBaseDeDados()
         {
             var listaVendas = _vendaRepository.ListarTodasAsVendas();
+            
+            Console.WriteLine("Lista das vendas realizadas:");
+            Console.WriteLine(string.Empty);
+
+            Console.WriteLine("marca - valor unitário - quantidade - valor total da venda");
             Console.WriteLine(listaVendas);
         }
     }

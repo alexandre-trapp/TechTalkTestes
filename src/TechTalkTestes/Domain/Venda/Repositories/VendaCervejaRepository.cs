@@ -42,7 +42,7 @@ namespace TechTalkTestes.Domain.Venda.Repositories
             using var command = new NpgsqlCommand("SELECT marca, valor_unitario, quantidade_vendida, valor_total_venda FROM vendas_cerveja", _conn);
             var vendas = command.ExecuteReader();
 
-            var listaVendasCervejas = new StringBuilder("Lista das vendas realizadas:");
+            var listaVendasCervejas = new StringBuilder();
             listaVendasCervejas.AppendLine();
 
             while (vendas.Read())
