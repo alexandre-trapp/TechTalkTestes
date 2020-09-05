@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "TechTalkTestes": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "POSTGRES_SERVERNAME": "postgretechtalktestes.postgres.database.azure.com",
+        "POSTGRES_PASSWORD": "15303@le",
+        "POSTGRES_USERID": "trapp@postgretechtalktestes",
+        "POSTGRES_DATABASE": "techtalktestes_db"
+      }
+    }
+  }
+}

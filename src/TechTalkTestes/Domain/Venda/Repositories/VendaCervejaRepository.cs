@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System.Text;
 using TechTalkTestes.Domain.Venda.Services;
+using static TechTalkTestes.Domain.Venda.Constants.VendaCervejaColumns;
 
 namespace TechTalkTestes.Domain.Venda.Repositories
 {
@@ -34,11 +35,6 @@ namespace TechTalkTestes.Domain.Venda.Repositories
 
         public string ListarTodasAsVendas()
         {
-            const int MARCA = 0;
-            const int VALOR_UNITARIO = 1;
-            const int QUANTIDADE_VENDIDA = 2;
-            const int VALOR_TOTAL_VENDA = 3;
-
             using var command = new NpgsqlCommand("SELECT marca, valor_unitario, quantidade_vendida, valor_total_venda FROM vendas_cerveja", _conn);
             var vendas = command.ExecuteReader();
 

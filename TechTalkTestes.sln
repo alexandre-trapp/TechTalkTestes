@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalkTestes", "src\TechTalkTestes\TechTalkTestes.csproj", "{54D8146A-007A-462E-9710-21CBEF9B044F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B495C670-5BA2-4921-9992-3CA8BACC0122}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{B495C670-5BA2-4921-9992-3CA8BACC0122}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B75A0FD4-0C84-4CFD-BEF4-56E0D8126668}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B75A0FD4-0C84-4CFD-BEF4-56E0D8126668}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalkTestes.Unit.Tests", "Tests\TechTalkTestes.Unit.Tests\TechTalkTestes.Unit.Tests.csproj", "{8494BBAE-9012-4DA5-9A69-71B9E77D5936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalkTestes.Integration.Tests", "Tests\TechTalkTestes.Integration.Tests\TechTalkTestes.Integration.Tests.csproj", "{0783AD91-AFFD-4FFA-93D4-3A560213E634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalkTestes.Integration.Tests", "Tests\TechTalkTestes.Integration.Tests\TechTalkTestes.Integration.Tests.csproj", "{0783AD91-AFFD-4FFA-93D4-3A560213E634}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

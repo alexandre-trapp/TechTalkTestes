@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "TechTalkTestes.Integration.Tests": {
+      "commandName": "Project"
+    }
+  }
+}
