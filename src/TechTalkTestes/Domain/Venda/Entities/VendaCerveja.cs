@@ -1,6 +1,4 @@
-﻿using TechTalkTestes.Domain.Venda.Entities;
-
-namespace TechTalkTestes.Domain.Venda.Services
+﻿namespace TechTalkTestes.Domain.Venda.Entities
 {
     public abstract class VendaCerveja
     {

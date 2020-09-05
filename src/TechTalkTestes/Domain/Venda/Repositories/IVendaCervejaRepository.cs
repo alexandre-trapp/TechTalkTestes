@@ -1,4 +1,4 @@
-﻿using TechTalkTestes.Domain.Venda.Services;
+﻿using TechTalkTestes.Domain.Venda.Entities;
 
 namespace TechTalkTestes.Domain.Venda.Repositories
 {

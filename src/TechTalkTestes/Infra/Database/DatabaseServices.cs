@@ -2,6 +2,7 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using TechTalkTestes.Domain.Venda.Repositories;
+using TechTalkTestes.Infra.Database.Repositories;
 
 namespace TechTalkTestes.Infra.Database.Postgres
 {

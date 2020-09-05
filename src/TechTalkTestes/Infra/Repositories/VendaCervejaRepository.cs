@@ -1,9 +1,10 @@
 ﻿using Npgsql;
 using System.Text;
-using TechTalkTestes.Domain.Venda.Services;
+using TechTalkTestes.Domain.Venda.Entities;
+using TechTalkTestes.Domain.Venda.Repositories;
 using static TechTalkTestes.Domain.Venda.Constants.VendaCervejaColumns;
 
-namespace TechTalkTestes.Domain.Venda.Repositories
+namespace TechTalkTestes.Infra.Database.Repositories
 {
     public class VendaCervejaRepository : IVendaCervejaRepository
     {
