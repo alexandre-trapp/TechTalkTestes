@@ -39,7 +39,8 @@ namespace TechTalkTestes
             CadastrarVendaNaBaseDeDados(vendaBrahma);
             CadastrarVendaNaBaseDeDados(vendaStella);
 
-            ListarVendasDaBaseDeDados();
+            new ListarVendas(_vendaRepository)
+                .ListarVendasDaBaseDeDados();
         }
 
         private static void ExcluirVendasAntigas()
@@ -69,21 +70,6 @@ namespace TechTalkTestes
         private static void CadastrarVendaNaBaseDeDados(VendaCerveja vendaCerveja)
         {
             _vendaRepository.CadastrarVenda(vendaCerveja);
-        }
-
-        private static void ListarVendasDaBaseDeDados()
-        {
-            var listaVendas = _vendaRepository.ListarTodasAsVendas();
-
-            Console.WriteLine(string.Empty);
-            Console.WriteLine("---------------------------.");
-            Console.WriteLine(string.Empty);
-
-            Console.WriteLine("Lista das vendas realizadas:");
-            Console.WriteLine(string.Empty);
-
-            Console.WriteLine("marca - valor unitário - quantidade - valor total da venda");
-            Console.WriteLine(listaVendas);
         }
     }
 }

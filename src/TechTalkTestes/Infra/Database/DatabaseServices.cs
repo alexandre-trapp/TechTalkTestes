@@ -16,7 +16,11 @@ namespace TechTalkTestes.Infra.Database.Postgres
 
         private static NpgsqlConnection OpenConnection()
         {
-            var connectionString = PostgreConfiguration.ConnectionString;
+            var connectionString = PostgreConfiguration.GetConnectionString(
+                                        serverName: "postgreteste.postgres.database.azure.com",
+                                        database: "testes_db",
+                                        userId: "trapp@postgreteste",
+                                        password: "15303@le");
 
             var conn = new NpgsqlConnection(connectionString);
             conn.Open();
