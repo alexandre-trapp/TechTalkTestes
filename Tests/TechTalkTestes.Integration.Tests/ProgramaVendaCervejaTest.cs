@@ -13,13 +13,15 @@ namespace TechTalkTestes.Integration.Tests
         [Test]
         public void deve_cadastrar_a_venda_de_10_cervejas_brahma_4_reais_cada_e_cinco_stella_6_reais_mais_3_porcento_na_base_de_dados_totalizando_uma_venda_de_73_reais()
         {
-            // action
+            // prepare
             var programaVenda = new ProgramaVendaCerveja(Repositories._vendaCervejaRepository);
+
+            // action
             programaVenda.EfetuarVendaCerveja();
 
+            // verify
             var listaCervejasVendidas = ObterVendasDeCerveja();
 
-            // verify
             const int BRAHMA = 0;
             const int STELLA = 1;
 

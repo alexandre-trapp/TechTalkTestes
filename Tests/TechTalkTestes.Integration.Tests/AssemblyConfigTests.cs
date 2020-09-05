@@ -7,8 +7,14 @@ namespace TechTalkTestes.Integration.Tests
     [SetUpFixture]
     public class AssemblyConfigTests
     {
+        /// <summary>
+        /// Aqui você poderia realizar alguma ação
+        /// antes dos testes de integração iniciarem finalizado, 
+        /// como executar migrations, criar e conectar uma base de dados, tabelas, preencher
+        /// parametrizações default na base, etc.
+        /// </summary>
         [OneTimeSetUp]
-        public void ApplicationTearDown()
+        public void ApplicationSetUp()
         {
             SetEnvironmentVariablesDatabase();
 
@@ -26,6 +32,18 @@ namespace TechTalkTestes.Integration.Tests
         private void ConnectToDatabase()
         {
             Repositories.CreateRepositoriesTest(DatabaseServices.OpenConnection());
+        }
+
+        /// <summary>
+        /// Aqui você poderia realizar alguma ação
+        /// após todos os testes de integração terem finalizado, 
+        /// como limpar todos os dados das tabelas, ou dropar a base de dados, se necessário
+        /// </summary>
+        [OneTimeTearDown]
+        public void ApplicationTearDown()
+        {
+            //LimparTodasAsTabelas();
+            //DropDatabase();
         }
     }
 }
